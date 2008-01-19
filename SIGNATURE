@@ -1,0 +1,34 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 c376193c243b7a8c49f4ffdfdfe1fffeddb2dd72 Build.PL
+SHA1 a9c96b4c0be7bdff2479017a8ab134e6e5f066b4 Changes
+SHA1 b9c91bce9a69e01cf451b5767ed9cab9d80dcfe3 MANIFEST
+SHA1 535f47aa2e3257a26c3b064bf55a8710cf400191 META.yml
+SHA1 7c5102b78b731431d8b11c279af19e6883a9620a Makefile.PL
+SHA1 61588776166453dee73e8b9fb801073c262e7248 README
+SHA1 f35899e79fa0b1ccb8f020cc68046118d01105a8 lib/TextMate/JumpTo.pm
+SHA1 7d0d0d5bdd8649fbabbe64f16b4ed9a592a437de t/00-load.t
+SHA1 bdd09cf1930990e0da69bcd59e551c6b162f24d0 t/pod-coverage.t
+SHA1 0190346d7072d458c8a10a45c19f86db641dcc48 t/pod.t
+SHA1 11ca3aef45fb0a307b89c29ff6be68aa842146d6 t/valid.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (Darwin)
+
+iD8DBQFHkgXLwoknRJZQnCERAmxtAKCYdVRknrU+iGW1JOamDMVtibvdGgCcC4lP
+/m2xZ6qOyIm5YbmsSgW/s/U=
+=zjfm
+-----END PGP SIGNATURE-----
