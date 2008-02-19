@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                TextMate-JumpTo
-version:             0.04
+version:             0.05
 abstract:            Tell TextMate to jump to a particular file, line
 license:             perl
 author:              
