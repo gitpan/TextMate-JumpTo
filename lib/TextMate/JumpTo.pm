@@ -16,20 +16,20 @@ TextMate::JumpTo - Tell TextMate to jump to a particular file, line
 
 =head1 VERSION
 
-This document describes TextMate::JumpTo version 0.06
+This document describes TextMate::JumpTo version 0.07
 
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 =head1 SYNOPSIS
 
     use TextMate::JumpTo qw(jumpto tm_location);
-    
+
     jumpto( file => 'mysrc.pl', line => 123 );
-    
+
     my $textmate_link = tm_location( file => 'foo.t', line => 12 );
-  
+
 =head1 DESCRIPTION
 
 On Mac OS The TextMate editor handles urls of the form
@@ -70,7 +70,7 @@ position. Here's what it looks like:
         return 1;
     }
 
-=head1 INTERFACE 
+=head1 INTERFACE
 
 =head2 C<< jumpto >>
 
@@ -115,6 +115,8 @@ sub jumpto {
 # Open a URL on Mac OS.
 sub _open {
     my ( $url, $bg ) = @_;
+    croak "TextMate only runs on Mac OS"
+      unless $^O =~ /darwin/;
     my @cmd = ( '/usr/bin/open', ( $bg ? ( '-g' ) : () ), $url );
     system @cmd and croak "Can't open $url ($?)";
 }
@@ -177,6 +179,6 @@ modify it under the same terms as Perl itself. See L<perlartistic>.
 
 =begin html
 
-<script type="text/javascript"  src="http://adserver.szabgab.com/ads/direct_link.js"></script>
+<script type="text/javascript" src="http://adserver.szabgab.com/ads/direct_link.js"></script>
 
 =end html
